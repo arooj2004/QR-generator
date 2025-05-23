@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/icon" href="{{url_for('static',filename='images/favicon.ico.jpg')}}">
+    <title>QR Generator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}" />
+</head>
+<body>
+    <ul>
+        <li><img src="static/images/default-removebg-preview.png" alt="QRgenerate"style="height: 50px;width: 200px;margin-left:0" /></li>
+        <li class="active"><a style="color: black;" href="{{url_for('home')}}">Home</a></li>
+        <li ><a href="{{url_for('generate')}}">Generate</a></li>
+        <li ><a href="{{url_for('detect')}}">Detect</a></li>
+      </ul>
+    <div class="main_frame">
+            <h1>You want to Generate or Detect </h1><br>
+           <a href="{{url_for('generate')}}"> <button  type="Generate"><b style="font-size: x-large;">Generate</b></button></a><br>
+            <br><a href="{{url_for('detect')}}"><button type="Detect"><b style="font-size:x-large;">Detect</b></button></a>
+    </div>
+</body>
+
+</html>

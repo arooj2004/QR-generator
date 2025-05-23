@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/icon" href="{{url_for('static',filename='images/favicon.ico.jpg')}}">
+  <title>QR Generator</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}" />
+</head>
+
+<body>
+  <ul>
+    <li><img src="static/images/default-removebg-preview.png" alt="QRgenerate"style="height: 50px;width: 200px;margin-left:0" /></li>
+    <li><a href="{{url_for('home')}}">Home</a></li>
+    <li><a href="{{url_for('generate')}}">Generate</a></li>
+    <li class="active"><a style="color: black;" href="{{url_for('detect')}}">Detect</a></li>
+  </ul>
+  <div class="main_frame">
+    <form action="/detect" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept="image/*">
+      <button type="submit">Upload</button>
+  </form>
+  
+</body>
+
+</html>
